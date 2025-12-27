@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://martianchain.com/schemas/network.v1.schema.json",
+  "title": "MartianChain Network Info Schema (v1)",
+  "type": "object",
+  "required": [
+    "chainName",
+    "chainId",
+    "chainIdHex",
+    "nativeToken",
+    "rpcUrls",
+    "wsUrls",
+    "urls",
+    "identifiers",
+    "contracts",
+    "version"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "chainName": {
+      "type": "string"
+    },
+    "chainId": {
+      "type": "integer"
+    },
+    "chainIdHex": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]+$"
+    },
+    "blockTimeSeconds": {
+      "type": "integer"
+    },
+    "gasLimit": {
+      "type": "integer"
+    },
+    "baseFeeGwei": {
+      "type": "integer"
+    },
+    "nativeToken": {
+      "type": "object",
+      "required": [
+        "name",
+        "symbol",
+        "totalSupply",
+        "decimals"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "totalSupply": {
+          "type": "string"
+        },
+        "decimals": {
+          "type": "integer"
+        },
+        "decimalsNote": {
+          "type": "string"
+        }
+      }
+    },
+    "owners": {
+      "type": "object",
+      "properties": {
+        "cChainOwner": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$"
+        },
+        "pChainOwner": {
+          "type": "string"
+        }
+      }
+    },
+    "identifiers": {
+      "type": "object",
+      "required": [
+        "subnetId",
+        "blockchainId",
+        "conversionTxId"
+      ],
+      "properties": {
+        "subnetId": {
+          "type": "string"
+        },
+        "blockchainId": {
+          "type": "string"
+        },
+        "conversionTxId": {
+          "type": "string"
+        }
+      }
+    },
+    "contracts": {
+      "type": "object",
+      "required": [
+        "validatorMessagesLibrary",
+        "validatorManager"
+      ],
+      "properties": {
+        "validatorMessagesLibrary": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$"
+        },
+        "validatorManager": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$"
+        }
+      }
+    },
+    "rpcUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "wsUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "urls": {
+      "type": "object",
+      "required": [
+        "explorer",
+        "docs",
+        "website"
+      ],
+      "properties": {
+        "explorer": {
+          "type": "string"
+        },
+        "docs": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

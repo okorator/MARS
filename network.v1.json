@@ -1,0 +1,49 @@
+{
+  "chainName": "Martian Chain",
+  "chainId": 2027,
+  "chainIdHex": "0x7EB",
+  "blockTimeSeconds": 2,
+  "gasLimit": 15000000,
+  "baseFeeGwei": 25,
+  "nativeToken": {
+    "name": "Erol Musk",
+    "symbol": "EROL",
+    "totalSupply": "1000000000",
+    "decimals": 18,
+    "decimalsNote": "18 is the standard EVM default used for wallet add-network snippets; change only if Martian Chain differs."
+  },
+  "owners": {
+    "cChainOwner": "0x2DF94D61536820970B84C9d8DACd5B2b04adF0c6",
+    "pChainOwner": "P-avax1dh7qmzu22qjf0sv6ake2tde8h6p5usfxtcq72p"
+  },
+  "identifiers": {
+    "subnetId": "KQnyo57ynwQ5QD1xcLYySYSVxvR1yQCU3vmH7krZ6XLhZjSrV",
+    "blockchainId": "QCdAaQnYx6XMyr7NbSXwMizeFmqx1vA4Rd1LBGrnxf96mdNL6",
+    "conversionTxId": "NbjWyHV5U8S5KUZ5irWbr84jyr9k5EjPCKL6Jgs5rDS2Kvnxo"
+  },
+  "contracts": {
+    "validatorMessagesLibrary": "0x268c240aa0e8c8e6e0a01f94373e0fa50da6d914",
+    "validatorManager": "0xc2b68ba87061ca3d3c0b203151e1112cee1f612d"
+  },
+  "rpcUrls": [
+    "https://rpc1.martianchain.com",
+    "https://rpc2.martianchain.com",
+    "https://rpc3.martianchain.com",
+    "https://rpc4.martianchain.com",
+    "https://rpc5.martianchain.com"
+  ],
+  "wsUrls": [
+    "wss://rpc-ws1.martianchain.com",
+    "wss://rpc-ws2.martianchain.com",
+    "wss://rpc-ws3.martianchain.com",
+    "wss://rpc-ws4.martianchain.com",
+    "wss://rpc-ws5.martianchain.com"
+  ],
+  "urls": {
+    "explorer": "https://explorer.martianchain.com",
+    "docs": "https://docs.martianchain.com",
+    "website": "https://martianchain.com"
+  },
+  "version": "v1",
+  "generatedAt": "2025-12-27"
+}
